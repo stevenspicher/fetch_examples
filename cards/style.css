@@ -1,5 +1,39 @@
-td {
-    width: 200px;
-    height: 200px;
-    border: 1px solid black;
-}
+body {
+    background-image: url(https://www.fabricgateway.com/images/fabricgateway/5e/5ef5883448e952bf87d358822e67c0dd.jpeg);
+    background-size: cover;
+  }
+  
+  .table {
+    margin: 35vw;
+    margin-top: 15vh;
+  }
+  
+  .card {
+    position: absolute;
+  }
+  
+  .image0 {
+    transform: rotate(-30deg);
+    transform-origin: 10% 100%
+  }
+  
+  .image1 {
+    transform: rotate(-20deg);
+    transform-origin: 10% 100%
+  }
+  
+  .image2 {
+    -webkit-transform: rotate(-10deg);
+    transform-origin: 10% 100%
+  }
+  
+  .image3 {
+    -webkit-transform: rotate(0deg);
+    transform-origin: 0% 100%
+  }
+  
+  .image4 {
+    -webkit-transform: rotate(10deg);
+    transform-origin: 5% 100%
+  }
+  

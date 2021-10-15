@@ -1,10 +1,6 @@
+let cardUrl = "https://deckofcardsapi.com/api/deck/new/draw/?count=5"
 
-
-let cardUrl = "https://deckofcardsapi.com/api/deck/new/draw/?count=1"
-
-let picElement = document.createElement("img");
-let cardFrame = document.querySelectorAll(".card");
-
+const containers = document.querySelectorAll('.card');
 
 const fetchText = (url) => {
   fetch(url)
@@ -15,11 +11,13 @@ const fetchText = (url) => {
 fetchText(cardUrl)
 
 const dealCard = (data) => {
-  
-  picElement.src = `${data.cards[0].image}`;
-  cardFrame[0].appendChild(picElement)
-  cardFrame[1].appendChild(picElement)
- }
+  for (let i = 0; i < containers.length; i++) {
+    const images = document.createElement('img');
+    images.classList.add(`image${i}`)
+    images.setAttribute('src', `${data.cards[i].image}`);
+    containers[i].appendChild(images);
+  }
+}
 
 
 
